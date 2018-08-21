@@ -6,12 +6,12 @@
   <h1 class="w3-center">Jobs</h1>
 
   <!-- Jobs List-->
-  <li v-for="job in jobList" :key= "job.url" :id="job.url" class="w3-bar w3-card-4 w3-margin-top w3-display-container">
+  <li v-for="job in jobsList" :key= "job.id" :id="job.id" class="w3-bar w3-card-4 w3-margin-top w3-display-container">
       <div class="w3-bar-item">
-        <span class="w3-large">{{job. title}}</span><br>
+        <span class="w3-large">{{job.title}}</span><br>
         <span>{{job.description}}</span>
         </div>  
-        <a href="subs.html" class="w3-block w3-button w3-teal w3-hover-green" >See More</a>
+        <a href="job.url" class="w3-block w3-button w3-teal w3-hover-green" >See More</a>
     </li>
     
   
@@ -57,8 +57,8 @@ export default {
   }, methods:{
     getJobs(){
       console.log("GET A FUKING JOB!")
-      axios.get('http://localhost:3000/jobs')
-        .then(response =>  {this.jobsList = response.data, console.log("Aqui tienes la mierda"), console.log(this.jobsList)}
+      axios.get('http://localhost:3000/data')
+        .then((response) =>  {this.jobsList = response.data[0].jobs, console.log("Aqui tienes la mierda")}
           
         )
         .catch(error => {

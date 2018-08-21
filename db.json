@@ -1,56 +1,63 @@
 {
-    "id" : "5b7ab6b5679434175c36e87f",
-    "jobs" : [ 
+    "data": [
         {
-            "id" : "d2cb123f-3cf2-4868-9a54-2c322b4bd3ce",
-            "title" : "(Lead) Infrastructure & Cloud Operations Engineer",
-            "url" : "https://jobs.lever.co/affirm/d2cb123f-3cf2-4868-9a54-2c322b4bd3ce",
-            "description" : "Affirm’s engineering team is building a large-scale, massively distributed, fault-tolerant global infrastructure shared across multiple financial products, merchants and vendors. Ensuring that our infrastructure is scalable, reliable, fault-tolerant and secure is a big job.\n\nAs the first Operations engineer on the Platform Engineering team, you will have the unique opportunity to bring Operations best-practices to Affirm, grow the Operations team, and oversee the operation of a complex global infrastructure. The breadth of responsibility is wide: whether it be improving our testing, deployment, automation, or monitoring systems; managing our CI/CD and ETL pipelines; consulting with other engineers on technical designs and operational best-practices; reducing costs; or leading technical projects and growing the Operations team. This is a great opportunity for impact and growth!\n"
-        }, 
-        {
-            "id" : "55adf594-8330-4b50-8089-ec3b8c6aa8cf",
-            "title" : "(Senior) Frontend Engineer",
-            "url" : "https://jobs.lever.co/affirm/55adf594-8330-4b50-8089-ec3b8c6aa8cf",
-            "description" : "\nIn order to succeed in our vision to offer honest financial services that improve lives, our team must maintain extreme efficiency and deliver a seamless experience with every customer interaction. We're looking for a talented and motivated front-end engineer who will build products and tools that empower our customers, merchant partners, and employees.\n"
-        }, 
-        {
-            "id" : "f7ec04cb-4a4f-456d-b1fa-c2909e9da16f",
-            "title" : "(Senior) Software Engineer - Infrastructure/Platform",
-            "url" : "https://jobs.lever.co/affirm/f7ec04cb-4a4f-456d-b1fa-c2909e9da16f",
-            "description" : "Infrastructure engineers are the backbone of the Engineering team. The team is responsible for building awesome products and systems that allow the rest of engineering to produce and deploy software that is scalable, reliable, secure, correct, consistent, and well tested. Scaling a global infrastructure shared across multiple merchants, vendors and products is hard. Our consistency and security requirements make scaling harder. Hard problems fascinate us and the Infrastructure engineers work with all of our Platform and Product teams to find simple, consistent, clean and scalable solutions to their business requirements.\n"
-        }, 
-        {
-            "id" : "c29a345a-fbc0-4f11-9c00-a829f9a071ce",
-            "title" : "(Senior) Software Engineer - Site Reliability",
-            "url" : "https://jobs.lever.co/affirm/c29a345a-fbc0-4f11-9c00-a829f9a071ce",
-            "description" : "Affirm’s engineering team is working on building a large-scale, massively distributed, fault-tolerant global infrastructure shared across multiple financial products, merchants and vendors. Ensuring reliability and scalability for such an infrastructure is hard. Our consistency and security requirements make scaling harder. Our Site Reliability Engineering team consists of engineers who combine software and systems engineering to build and run our infrastructure in a cost-effective manner. The team ensures that Affirm's systems meet our users' and partners' performance requirements, while enabling engineering to have immediate, actionable visibility into the software that they build and deploy.\n"
-        }, 
-        {
-            "id" : "4964174d-1dd6-40ea-9a96-32342f1e2825",
-            "title" : "Account Executive - Strategic Brands",
-            "url" : "https://jobs.lever.co/affirm/4964174d-1dd6-40ea-9a96-32342f1e2825",
-            "description" : "Affirm provides honest financing options to consumers checking out at online stores. The Strategic Brands Account Executive will identify and drive opportunities to build out our merchant business. This role will have a direct impact on top-priority, company-wide goals and will provide accelerated learning with a world-class team.\n"
-        }, 
-        {
-            "id" : "f2934a43-1c63-46a0-93dd-451edb394177",
-            "title" : "Analytics Lead",
-            "url" : "https://jobs.lever.co/affirm/f2934a43-1c63-46a0-93dd-451edb394177",
-            "description" : "We’re looking for intelligent, driven professionals to join our new team. The Operations Strategy & Analytics team is responsible for leveraging data driven insights to drive overall servicing strategy across contact channels, customer segmentation, product roadmaps, and technology investments. The ideal candidate will have strong analytical and problem solving skills, as well as interpersonal skills to work across the organization and with external partners to drive forward recommendations.\n"
-        }, 
-        {
-            "id" : "4f9ab14d-0948-44b2-bbf3-63343b59c021",
-            "title" : "Business Analyst",
-            "url" : "https://jobs.lever.co/affirm/4f9ab14d-0948-44b2-bbf3-63343b59c021",
-            "description" : "We’re looking for intelligent, driven professionals to join our new team. The Operations Strategy & Analytics team is responsible for leveraging data driven insights to drive overall servicing strategy across contact channels, customer segmentation, product roadmaps, and technology investments. The ideal candidate will have strong analytical and problem solving skills, as well as interpersonal skills to work across the organization and with external partners to drive forward recommendations.\n"
-        }, 
-        {
-            "id" : "00b449db-4e76-49c0-b45b-e341b3aaf9ff",
-            "title" : "Business Analyst, Strategy & Analytics",
-            "url" : "https://jobs.lever.co/affirm/00b449db-4e76-49c0-b45b-e341b3aaf9ff",
-            "description" : "We’re looking for intelligent, driven professionals to join our new Client Insights team. This client-facing team is responsible for setting growth plans for our live accounts, driving client analytics, and delivering client recommendations to current and prospect merchants. The ideal candidate will have strong analytical and problem solving skills, as well as interpersonal skills to work across the organization and with clients to drive forward recommendations.\n"
+            "enterprise": [
+                {
+                    "name": "affirm",
+                    "hash": "b4a0639cd42e5d90eb53b4b0f34c56653ba17a2d42c3d87219ca0b8df535d482",
+                    "__v": 0
+                }
+            ],
+            "jobs": [
+                {
+                    "id": "d2cb123f-3cf2-4868-9a54-2c322b4bd3ce",
+                    "title": "(Lead) Infrastructure & Cloud Operations Engineer",
+                    "url": "https://jobs.lever.co/affirm/d2cb123f-3cf2-4868-9a54-2c322b4bd3ce",
+                    "description": "Affirm’s engineering team is building a large-scale, massively distributed, fault-tolerant global infrastructure shared across multiple financial products, merchants and vendors. Ensuring that our infrastructure is scalable, reliable, fault-tolerant and secure is a big job.\n\nAs the first Operations engineer on the Platform Engineering team, you will have the unique opportunity to bring Operations best-practices to Affirm, grow the Operations team, and oversee the operation of a complex global infrastructure. The breadth of responsibility is wide: whether it be improving our testing, deployment, automation, or monitoring systems; managing our CI/CD and ETL pipelines; consulting with other engineers on technical designs and operational best-practices; reducing costs; or leading technical projects and growing the Operations team. This is a great opportunity for impact and growth!\n"
+                },
+                {
+                    "id": "55adf594-8330-4b50-8089-ec3b8c6aa8cf",
+                    "title": "(Senior) Frontend Engineer",
+                    "url": "https://jobs.lever.co/affirm/55adf594-8330-4b50-8089-ec3b8c6aa8cf",
+                    "description": "\nIn order to succeed in our vision to offer honest financial services that improve lives, our team must maintain extreme efficiency and deliver a seamless experience with every customer interaction. We're looking for a talented and motivated front-end engineer who will build products and tools that empower our customers, merchant partners, and employees.\n"
+                },
+                {
+                    "id": "f7ec04cb-4a4f-456d-b1fa-c2909e9da16f",
+                    "title": "(Senior) Software Engineer - Infrastructure/Platform",
+                    "url": "https://jobs.lever.co/affirm/f7ec04cb-4a4f-456d-b1fa-c2909e9da16f",
+                    "description": "Infrastructure engineers are the backbone of the Engineering team. The team is responsible for building awesome products and systems that allow the rest of engineering to produce and deploy software that is scalable, reliable, secure, correct, consistent, and well tested. Scaling a global infrastructure shared across multiple merchants, vendors and products is hard. Our consistency and security requirements make scaling harder. Hard problems fascinate us and the Infrastructure engineers work with all of our Platform and Product teams to find simple, consistent, clean and scalable solutions to their business requirements.\n"
+                },
+                {
+                    "id": "c29a345a-fbc0-4f11-9c00-a829f9a071ce",
+                    "title": "(Senior) Software Engineer - Site Reliability",
+                    "url": "https://jobs.lever.co/affirm/c29a345a-fbc0-4f11-9c00-a829f9a071ce",
+                    "description": "Affirm’s engineering team is working on building a large-scale, massively distributed, fault-tolerant global infrastructure shared across multiple financial products, merchants and vendors. Ensuring reliability and scalability for such an infrastructure is hard. Our consistency and security requirements make scaling harder. Our Site Reliability Engineering team consists of engineers who combine software and systems engineering to build and run our infrastructure in a cost-effective manner. The team ensures that Affirm's systems meet our users' and partners' performance requirements, while enabling engineering to have immediate, actionable visibility into the software that they build and deploy.\n"
+                },
+                {
+                    "id": "4964174d-1dd6-40ea-9a96-32342f1e2825",
+                    "title": "Account Executive - Strategic Brands",
+                    "url": "https://jobs.lever.co/affirm/4964174d-1dd6-40ea-9a96-32342f1e2825",
+                    "description": "Affirm provides honest financing options to consumers checking out at online stores. The Strategic Brands Account Executive will identify and drive opportunities to build out our merchant business. This role will have a direct impact on top-priority, company-wide goals and will provide accelerated learning with a world-class team.\n"
+                },
+                {
+                    "id": "f2934a43-1c63-46a0-93dd-451edb394177",
+                    "title": "Analytics Lead",
+                    "url": "https://jobs.lever.co/affirm/f2934a43-1c63-46a0-93dd-451edb394177",
+                    "description": "We’re looking for intelligent, driven professionals to join our new team. The Operations Strategy & Analytics team is responsible for leveraging data driven insights to drive overall servicing strategy across contact channels, customer segmentation, product roadmaps, and technology investments. The ideal candidate will have strong analytical and problem solving skills, as well as interpersonal skills to work across the organization and with external partners to drive forward recommendations.\n"
+                },
+                {
+                    "id": "4f9ab14d-0948-44b2-bbf3-63343b59c021",
+                    "title": "Business Analyst",
+                    "url": "https://jobs.lever.co/affirm/4f9ab14d-0948-44b2-bbf3-63343b59c021",
+                    "description": "We’re looking for intelligent, driven professionals to join our new team. The Operations Strategy & Analytics team is responsible for leveraging data driven insights to drive overall servicing strategy across contact channels, customer segmentation, product roadmaps, and technology investments. The ideal candidate will have strong analytical and problem solving skills, as well as interpersonal skills to work across the organization and with external partners to drive forward recommendations.\n"
+                },
+                {
+                    "id": "00b449db-4e76-49c0-b45b-e341b3aaf9ff",
+                    "title": "Business Analyst, Strategy & Analytics",
+                    "url": "https://jobs.lever.co/affirm/00b449db-4e76-49c0-b45b-e341b3aaf9ff",
+                    "description": "We’re looking for intelligent, driven professionals to join our new Client Insights team. This client-facing team is responsible for setting growth plans for our live accounts, driving client analytics, and delivering client recommendations to current and prospect merchants. The ideal candidate will have strong analytical and problem solving skills, as well as interpersonal skills to work across the organization and with clients to drive forward recommendations.\n"
+                }
+            ]
         }
-    ],
-    "name" : "affirm",
-    "hash" : "b4a0639cd42e5d90eb53b4b0f34c56653ba17a2d42c3d87219ca0b8df535d482",
-    "__v" : 0
+    ]
 }
