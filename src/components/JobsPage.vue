@@ -7,11 +7,11 @@
 
   <!-- Jobs List-->
   <li v-for="job in jobsList" :key= "job.id" :id="job.id" class="w3-bar w3-card-4 w3-margin-top w3-display-container">
-      <div class="w3-bar-item">
+      <div class="w3-bar-item w3-container">
         <span class="w3-large">{{job.title}}</span><br>
         <span>{{job.description}}</span>
-        </div>  
-        <a href="job.url" class="w3-block w3-button w3-teal w3-hover-green" >See More</a>
+      </div>  
+        <a :href="job.url" class="w3-block w3-button w3-teal w3-hover-green" >See More</a>
     </li>
     
   
@@ -28,13 +28,6 @@
     </div>
   </div>
   
-  
-  <!-- Footer -->
-  <footer class="w3-row-padding w3-padding-32">
-      <h3>FOOTER</h3>
-      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-  </footer>
 
 <!-- End page content -->
 </div>
