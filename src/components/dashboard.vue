@@ -56,7 +56,7 @@
                                 <i class="fas fa-copy"></i>Subscriptions</router-link>
                         </li>
                         <li >
-                            <a @click="logOut">
+                            <a id="pointer" @click="logOut">
                                 <i  class="fas fa-share-square"></i>Log Out</a>
                         </li>
                     </ul>
@@ -111,5 +111,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+#pointer{
+    cursor: pointer;
+}
 </style>

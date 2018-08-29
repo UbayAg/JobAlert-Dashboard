@@ -10,18 +10,25 @@
                       <table class="table table-data2">
                           
                           <tbody v-for="job in jobsList" :key= "job.id" :id="job.id" class="tr-shadow">                              
-                              <tr >
-                                  <td><a class="title-2">{{job.title}}</a></td>
+                              <tr>
+                                  <td>
+                                    <tr><a class="title-2">{{job.title}}</a></tr>
+                                    <tr><a></a> </tr>
+                                    <tr class="empresa title-5">{{job.company}}</tr>
+                                    </td>
                                   
-                                  <td class="desc">{{job.description}}</td>
+                                 <td>
+                                    <tr>{{job.location}}</tr>
+                                    <hr>
+                                    <tr><a>Esta es la fecha</a></tr>
+                                  </td>
                                   
-                                  <td>{{job.location}}</td>
                                   
                                   <td>
                                       
                                           
-                                            <button type="button" class="btn btn-success btn-sm btn-block">
-                                            <i class="fa fa-suitcase"></i>&nbsp; APPLY</button>
+                                            <a target="_blank" :href="job.url" type="button" class="btn btn-success btn-sm btn-block">
+                                            <i class="fa fa-suitcase"></i>&nbsp; SEE OFFER</a>
                                           
                                   </td>
                               </tr>
@@ -83,19 +90,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Karma", sans-serif;
-}
-.w3-bar-block .w3-bar-item {
-  padding: 20px;
-}
-li {
-  list-style: none;
+.empresa{
+color: rgb(50, 87, 167);
 }
 </style>
