@@ -5,7 +5,7 @@
 <div class="w3-main w3-content w3-padding" style="max-width:1200px">
 
     <h1 class="w3-center">Subscribtions</h1>
-  <!-- First Photo Grid-->
+  <!-- Subs Grid-->
   <div class="w3-row-padding w3-center w3-display-container" id="subs">
     <div v-for="sub in subsList" :key= "sub" :id="sub" class="w3-third">
       <div>
@@ -43,11 +43,17 @@ import axios from "axios";
 export default {
   name: "SubsPage",
   created() {
+    this.auth();
+    if (this.authenticated !== "true") {
+      this.$router.replace({ name: "loginPage" });
+    };
     this.getSubs();
   },
   data() {
     return {
-      subsList: []
+      subsList: [],
+      authenticated: false
+
     };
   },
   methods: {
@@ -55,11 +61,17 @@ export default {
       axios
         .get("http://localhost:3000/data")
         .then(response => {
+          console.log(response.data);
           this.subsList = response.data[0].subscriptions;
+          console.log(this.subsList)
         })
         .catch(error => {
           console.log("ERROR:", error);
         });
+    },
+    auth(){
+      this.authenticated = localStorage.getItem("auth");
+      console.log("[AUTH]: ", this.authenticated);
     }
   }
 };
