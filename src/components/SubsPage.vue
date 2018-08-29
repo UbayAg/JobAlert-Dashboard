@@ -62,28 +62,22 @@ export default {
       axios
         .get("http://34.253.84.43:3030/api/subscriptions/"+localStorage.getItem("user_id"))
         .then(response => {
-          console.log(response.subscriptions);
           this.subsList = response.data.subscriptions;
-          console.log(this.subsList)
         })
         .catch(error => {
-          console.log("ERROR:", error);
         });
     },
     unsubscribe(sub){
       axios
         .post("http://34.253.84.43:3030/api/subscriptions/"+localStorage.getItem("user_id"))
         .then(response => {
-          console.log(response.subscriptions);
          
         })
         .catch(error => {
-          console.log("ERROR:", error);
         });
     },
     auth(){
       this.authenticated = localStorage.getItem("auth");
-      console.log("[AUTH]: ", this.authenticated);
     }
   }
 };

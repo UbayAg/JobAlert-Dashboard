@@ -53,10 +53,8 @@ export default {
   },
   mounted() {
       this.auth();
-      console.log('[AUTH2]: ', this.authenticated)
     if (this.authenticated !== true) {
       this.$router.replace({ name: "loginPage" });
-      console.log('hola')
     }
     this.getJobs();
   },
@@ -69,20 +67,16 @@ export default {
   },
   methods: {
     getJobs() {
-      console.log("GET A FUKING JOB!");
       axios
         .get("http://34.253.84.43:3030/api/jobs/"+localStorage.getItem("user_id"))
         .then(response => {
-          (this.jobsList = response.data),
-            console.log(response);
+          (this.jobsList = response.data)
         })
         .catch(error => {
-          console.log("ERROR:", error);
         });
     },
     auth() {
       this.authenticated = localStorage.getItem("auth");
-      console.log("[AUTH]: ", this.authenticated);
     }
   }
 };

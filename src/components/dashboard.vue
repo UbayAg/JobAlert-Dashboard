@@ -99,11 +99,9 @@ export default {
       localStorage.removeItem("user_password", "");
       localStorage.removeItem("user_id", "");
       this.$router.replace({ name: "loginPage" });
-      console.log('replace')
     },
     auth(){
       this.authenticated = localStorage.getItem("auth");
-      console.log("[AUTH]: ", this.authenticated);
     }
   }
 };

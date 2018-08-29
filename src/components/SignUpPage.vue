@@ -88,16 +88,15 @@ export default {
         email: this.S_email,
         password: hash.sha256().update(this.S_password).digest('hex')
       }
-      console.log(this.S_data);
+      const that = this;
       axios
         .post("http://34.253.84.43:3030/api/users", this.S_data)
         .then(function(response) {
-          // handle success
-          console.log(response);
+            // handle success
+            that.$router.replace({ name: "loginPage" });
         })
         .catch(function(error) {
           // handle error
-          console.log(error);
         })
         .then(function() {
           // always executed
@@ -106,7 +105,6 @@ export default {
     },
     auth(){
       this.authenticated = localStorage.getItem("auth");
-      console.log("[AUTH]: ", this.authenticated);
     }
   }
 };
