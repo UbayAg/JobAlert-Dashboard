@@ -1,39 +1,39 @@
 <template>
 <div id="jobsPage">
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px">
-
-    <h1 class="w3-center">Subscribtions</h1>
-  <!-- Subs Grid-->
-  <div class="w3-row-padding w3-center w3-display-container" id="subs">
-    <div v-for="sub in subsList" :key= "sub" :id="sub" class="w3-third">
-      <div>
-      <h3 class="w3-padding-16 w3-card-4">{{sub}}</h3>
-      <button class="w3-button w3-block w3-red w3-card-4">UNSUBSCRIBE</button>
+<!-- DATA TABLE-->
+  <section class="p-t-20" style="min-height: 1vh">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <h3 class="title-4 m-b-35">Subscriptions</h3>                  
+                  <div class="table-responsive ">
+                      <table class="table table-data2">
+                          
+                          <tbody v-for="sub in subsList" :key= "sub" :id="sub" class="tr-shadow">                              
+                              <tr >
+                                  <td><a class="title-2">{{sub}}</a></td>
+                                  
+                                  
+                                  <td>
+                                      
+                                          
+                                            <button type="button" class="btn btn-danger btn-sm btn-block">
+                                            <i class="fa fa-trash"></i>&nbsp; UNSUBSCRIBE</button>
+                                          
+                                  </td>
+                              </tr>
+                              <tr class="spacer"></tr>                              
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
-    
-    
-  </div>
-  
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div>
+  </section>
+  <!-- END DATA TABLE-->
   
   
-
-<!-- End page content -->
-</div>
 
 </div>
 </template>
@@ -59,10 +59,10 @@ export default {
   methods: {
     getSubs() {
       axios
-        .get("http://localhost:3000/data")
+        .get("http://34.253.84.43:3030/api/subscriptions/"+localStorage.getItem("user_id"))
         .then(response => {
-          console.log(response.data);
-          this.subsList = response.data[0].subscriptions;
+          console.log(response.subscriptions);
+          this.subsList = response.data.subscriptions;
           console.log(this.subsList)
         })
         .catch(error => {
