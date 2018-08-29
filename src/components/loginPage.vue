@@ -22,7 +22,6 @@
                                 </div>
                                 <div class="login-checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember">Remember Me
                                     </label>
                                     <label>
                                         <a href="#">Forgotten Password?</a>
@@ -78,7 +77,6 @@ export default {
         //password: this.password
       }
       const that = this;
-      console.log("[USER DATA]: ",this.data);
       axios
         .post("http://34.253.84.43:3030/api/sign", this.data)
         .then(function(response) {
@@ -98,7 +96,6 @@ export default {
           that.$router.replace({ name: "JobsPage" });
         })
         .catch(function(error) {
-          console.log(error);
         })
         .then(function() {
           // always executed
@@ -106,7 +103,6 @@ export default {
     },
     auth(){
       this.authenticated = localStorage.getItem("auth");
-      console.log("[AUTH]: ", this.authenticated);
     }
   }
 };

@@ -25,7 +25,6 @@ export default {
   methods: {
     auth(){
       this.authenticated = localStorage.getItem("auth");
-      console.log("[AUTH]: ", this.authenticated);
     },
     logOut(){
       
