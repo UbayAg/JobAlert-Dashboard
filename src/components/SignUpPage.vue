@@ -90,7 +90,7 @@ export default {
       }
       console.log(this.S_data);
       axios
-        .post("http://localhost:3333/api/users", this.S_data)
+        .post("http://34.253.84.43:3030/api/users", this.S_data)
         .then(function(response) {
           // handle success
           console.log(response);

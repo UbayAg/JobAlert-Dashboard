@@ -9,36 +9,23 @@
                   <div class="table-responsive ">
                       <table class="table table-data2">
                           
-                          <tbody>
-                              <tr class="tr-shadow">
+                          <tbody v-for="job in jobsList" :key= "job.id" :id="job.id" class="tr-shadow">                              
+                              <tr >
+                                  <td><a class="title-2">{{job.title}}</a></td>
                                   
-                                  <td>Lori Lynch</td>
+                                  <td class="desc">{{job.description}}</td>
                                   
-                                  <td class="desc">Samsung S8 Black</td>
-                                  <td>2018-09-27 02:12</td>
+                                  <td>{{job.location}}</td>
+                                  
                                   <td>
-                                      <span class="status--process">Processed</span>
-                                  </td>
-                                  <td>$679.00</td>
-                                  <td>
-                                      <div class="table-data-feature">
-                                          <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                              <i class="zmdi zmdi-mail-send"></i>
-                                          </button>
-                                          <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                              <i class="zmdi zmdi-edit"></i>
-                                          </button>
-                                          <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                              <i class="zmdi zmdi-delete"></i>
-                                          </button>
-                                          <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                              <i class="zmdi zmdi-more"></i>
-                                          </button>
-                                      </div>
+                                      
+                                          
+                                            <button type="button" class="btn btn-success btn-sm btn-block">
+                                            <i class="fa fa-suitcase"></i>&nbsp; APPLY</button>
+                                          
                                   </td>
                               </tr>
-                              <tr class="spacer"></tr>
-                              
+                              <tr class="spacer"></tr>                              
                           </tbody>
                       </table>
                   </div>
@@ -77,10 +64,10 @@ export default {
     getJobs() {
       console.log("GET A FUKING JOB!");
       axios
-        .get("http://localhost:3000/data")
+        .get("http://34.253.84.43:3030/api/jobs/"+localStorage.getItem("user_id"))
         .then(response => {
-          (this.jobsList = response.data[0].jobs),
-            console.log("Aqui tienes la mierda");
+          (this.jobsList = response.data),
+            console.log(response);
         })
         .catch(error => {
           console.log("ERROR:", error);

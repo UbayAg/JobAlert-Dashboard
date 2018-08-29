@@ -75,11 +75,12 @@ export default {
       this.data = {
         email: this.email,
         password: hash.sha256().update(this.password).digest('hex')
+        //password: this.password
       }
       const that = this;
       console.log("[USER DATA]: ",this.data);
       axios
-        .post("http://localhost:3333/api/sign", this.data)
+        .post("http://34.253.84.43:3030/api/sign", this.data)
         .then(function(response) {
          
           that.userData = {

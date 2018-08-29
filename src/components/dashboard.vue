@@ -27,10 +27,10 @@
                             <router-link to="/dashboard/Subs">
                                 <i class="fas fa-copy"></i>Subscriptions</router-link>
                         </li>
-                        <li>
-                            <a>
-                                <i class="fas fa-sign-out"></i>Sign Out</a>
-                        </li>                        
+                        <li >
+                            <a @click="logOut">
+                                <i  class="fas fa-share-square"></i>Log Out</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -57,7 +57,7 @@
                         </li>
                         <li >
                             <a @click="logOut">
-                                <i  class="fas fa-sign-out"></i>Log Out</a>
+                                <i  class="fas fa-share-square"></i>Log Out</a>
                         </li>
                     </ul>
                 </nav>
