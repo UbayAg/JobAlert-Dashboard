@@ -18,7 +18,7 @@
                                   <td>
                                       
                                           
-                                            <button type="button" class="btn btn-danger btn-sm btn-block">
+                                            <button v-on:click="unsubscribe(sub)" type="button" class="btn btn-danger btn-sm btn-block">
                                             <i class="fa fa-trash"></i>&nbsp; UNSUBSCRIBE</button>
                                           
                                   </td>
@@ -52,7 +52,8 @@ export default {
   data() {
     return {
       subsList: [],
-      authenticated: false
+      authenticated: false,
+      unsubs: ""
 
     };
   },
@@ -64,6 +65,17 @@ export default {
           console.log(response.subscriptions);
           this.subsList = response.data.subscriptions;
           console.log(this.subsList)
+        })
+        .catch(error => {
+          console.log("ERROR:", error);
+        });
+    },
+    unsubscribe(sub){
+      axios
+        .post("http://34.253.84.43:3030/api/subscriptions/"+localStorage.getItem("user_id"))
+        .then(response => {
+          console.log(response.subscriptions);
+         
         })
         .catch(error => {
           console.log("ERROR:", error);
