@@ -20,14 +20,14 @@
                                  <td>
                                     <tr>{{job.location}}</tr>
                                     <hr>
-                                    <tr><a>Esta es la fecha</a></tr>
+                                    <tr><a>j{{job.date}}</a></tr>
                                   </td>
                                   
                                   
                                   <td>
                                       
                                           
-                                            <a target="_blank" :href="job.url" type="button" class="btn btn-success btn-sm btn-block">
+                                            <a target="_blank" :href="job.url" class="btn btn-success btn-sm btn-block">
                                             <i class="fa fa-suitcase"></i>&nbsp; SEE OFFER</a>
                                           
                                   </td>
@@ -74,6 +74,10 @@ export default {
         })
         .catch(error => {
         });
+    },
+    jobDate(date){
+      console.log('Esto funka¿?')
+
     },
     auth() {
       this.authenticated = localStorage.getItem("auth");
