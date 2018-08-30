@@ -27,6 +27,9 @@
                                         <a href="#">Forgotten Password?</a>
                                     </label>
                                 </div>
+                                <div id="loginMessages" class="">
+                                    <span>{{this.loginMessage}} <router-link v-if="this.loginMessage === 'Wrong email or password. '" to="signUp">Sign Up Here</router-link></span>
+                                 </div>
                                 <button v-on:click="login" class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
                             
                             <div class="register-link">
@@ -66,7 +69,8 @@ export default {
       email: "",
       password: "",
       userData: {},
-      authenticated: false
+      authenticated: false,
+      loginMessage: ""
     };
   },
   methods: {
@@ -74,7 +78,7 @@ export default {
       this.data = {
         email: this.email,
         password: hash.sha256().update(this.password).digest('hex')
-        //password: this.password
+       
       }
       const that = this;
       axios
@@ -93,9 +97,12 @@ export default {
           
           localStorage.setItem("auth", true);
 
-          that.$router.replace({ name: "JobsPage" });
+          that.$router.replace({ name: "JobsPage" });console.log(response)
         })
         .catch(function(error) {
+            console.log('[ERRORmsg]: ', error.response.data.error)
+            that.loginMessage = 'Wrong email or password. '
+            document.getElementById('loginMessages').classList.add('alert-danger')
         })
         .then(function() {
           // always executed
@@ -110,5 +117,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#loginMessages{
+    text-align: center;
 
+}
 </style>

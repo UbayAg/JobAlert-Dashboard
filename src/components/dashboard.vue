@@ -55,7 +55,7 @@
                             <router-link to="/dashboard/Subs">
                                 <i class="fas fa-copy"></i>Subscriptions</router-link>
                         </li>
-                        <li >
+                        <li id="logout">
                             <a id="pointer" @click="logOut">
                                 <i  class="fas fa-share-square"></i>Log Out</a>
                         </li>
@@ -111,5 +111,9 @@ export default {
 <style scoped>
 #pointer{
     cursor: pointer;
+}
+#logout{
+    position: absolute;
+    bottom: 10px;
 }
 </style>

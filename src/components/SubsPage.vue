@@ -13,14 +13,9 @@
                           <tbody v-for="sub in subsList" :key= "sub" :id="sub" class="tr-shadow">                              
                               <tr >
                                   <td><a class="title-2">{{sub}}</a></td>
-                                  
-                                  
                                   <td>
-                                      
-                                          
-                                            <button v-on:click="unsubscribe(sub)" type="button" class="btn btn-danger btn-sm btn-block">
-                                            <i class="fa fa-trash"></i>&nbsp; UNSUBSCRIBE</button>
-                                          
+                                     <button v-on:click="unsubscribe(sub)" type="button" class="btn btn-danger btn-sm btn-block">
+                                     <i class="fa fa-trash"></i>&nbsp; UNSUBSCRIBE</button>   
                                   </td>
                               </tr>
                               <tr class="spacer"></tr>                              
@@ -68,13 +63,29 @@ export default {
         });
     },
     unsubscribe(sub){
+      let data = {
+        "id": localStorage.getItem("user_id"),
+        "subscription": sub
+      }
+      console.log(data);
+      const that = this
       axios
-        .post("http://34.253.84.43:3030/api/subscriptions/"+localStorage.getItem("user_id"))
+        .delete("http://34.253.84.43:3030/api/subscriptions/unsubscribe", {data})
         .then(response => {
-         
+         console.log(response)
+
         })
         .catch(error => {
+          console.log(error.response)
         });
+                    console.log(
+                      that.subsList = that.subsList.filter(sub=>{
+                        if(sub !== data.subscription){
+                          return sub
+                      }
+                  
+                  })
+                    )
     },
     auth(){
       this.authenticated = localStorage.getItem("auth");
